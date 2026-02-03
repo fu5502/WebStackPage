@@ -62,24 +62,18 @@
 
 
 <style>
+    /* 强制大屏幕显示 8 列 */
     @media (min-width: 1200px) {
         .col-lg-2 {
-            width: 12.5% !important; /* 强制设为 1/8 宽度 */
+            width: 12.5% !important; /* 100% / 8 */
             float: left !important;
-            display: block !important;
         }
-        /* 修复偏移问题 */
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .row:before, .row:after {
-            display: none !important;
+        /* 防止卡片高度不一导致换行错乱 */
+        .xe-widget.xe-conversations {
+            margin-bottom: 20px !important;
         }
     }
-</style>
-
-    
+</style>    
 </head>
 
 <body class="page-body">
