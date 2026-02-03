@@ -61,12 +61,20 @@
     <meta name="twitter:image" content="http://www.webstack.cc/assets/images/webstack_banner_cn.png">
 
 
-
-        <style>
+<style>
     @media (min-width: 1200px) {
         .col-lg-2 {
-            width: 12.5% !important; /* 100% 除以 8 */
-            float: left;
+            width: 12.5% !important; /* 强制设为 1/8 宽度 */
+            float: left !important;
+            display: block !important;
+        }
+        /* 修复偏移问题 */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .row:before, .row:after {
+            display: none !important;
         }
     }
 </style>
